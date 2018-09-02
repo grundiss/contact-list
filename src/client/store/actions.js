@@ -2,7 +2,8 @@ export const ON_DELETE = "@@app:contact-list/ON_DELETE";
 export function onDelete(id) {
   return {
     type: ON_DELETE,
-    payload: { id }
+    payload: { id },
+    extra: { save: true }
   };
 }
 
@@ -32,5 +33,8 @@ export function onCloseEdittingModal() {
 
 export const ON_SAVE = "@@app:contact-list/ON_SAVE";
 export function onSave() {
-  return { type: ON_SAVE };
+  return {
+    type: ON_SAVE,
+    extra: { save: true }
+  };
 }
