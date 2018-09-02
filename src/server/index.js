@@ -9,7 +9,13 @@ export function main(root) {
   app.get('/', function(req, res) {
     res.send(`<!doctype html>
       <html>
-        <head><title>contacts-list</title></head>
+        <head>
+          <title>contacts-list</title>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+          <style>
+            body {font-family: 'Roboto', sans-serif;}
+          </style>
+        </head>
         <body>
           <div id="app"></div>
           <script type="text/javascript" src="/static/bundle.js"></script>
